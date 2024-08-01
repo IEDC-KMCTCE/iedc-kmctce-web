@@ -1,6 +1,11 @@
 @font-face {
   font-family: "CirceRounded";
-  src: url("assets/fonts/CirceRounded-Regular.otf");
+  src: url("assets/fonts/CirceRounded/CirceRounded-Regular.otf");
+}
+
+@font-face {
+  font-family: "marghote";
+  src: url("assets/fonts/marghote/marghote.otf");
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto&display=swap");
@@ -49,10 +54,16 @@ body {
   display: none;
 }
 
-#explore-btn {
-  background-color: #faf0c9;
+.explore-btn {
   padding: 20px;
-  border-radius: 32px;
+  border-radius: 16px;
+
+  font-family: "roboto";
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  background: "#FAF0C98F";
+  width: 200px;
 }
 
 @media screen and (max-width: 900px) {
@@ -61,20 +72,32 @@ body {
   }
 }
 
+header {
+  margin: 2vw 0;
+}
+
 #menubar {
   margin: 0;
   padding: 10px 20px;
   overflow: hidden;
-
   background-color: #333;
-  margin: 0 20%;
   border-radius: 20px;
+  font-family: "Inter";
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0; /* Ensure top is set */
+  font-size: small;
+  margin: 0 20px;
+  z-index: 1000; /* Ensure it stays above other elements */
 }
 
 #menubar ul {
   padding: 0;
   list-style-type: none;
   display: flex;
+
+  justify-content: center;
+  align-items: center;
 }
 
 #menubar li {
@@ -88,29 +111,28 @@ body {
   text-align: center;
   text-decoration: none;
 }
-.plus-jakarta-sans {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-}
 
 #second-head {
   color: white;
   font-size: min(100px, 8vw);
   font-weight: 600;
+
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 #second-caption {
   color: white;
-  font-family: "Inter" sans-serif;
+  font-family: "CirceRounded", Geneva, Verdana, sans-serif;
+
   font-size: min(18px, 5vw);
 }
 
 #third-head {
   color: white;
-  font-size: min(800px, 4vw);
+  font-size: max(20px, 4vw);
   font-weight: 100;
+
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 #third-head span {
@@ -121,9 +143,9 @@ body {
 
 #team-head {
   color: white;
-  font-size: min(30px, 4vw);
-  font-weight: 600;
+  font-size: min(50px, 4vw);
   text-align: center;
+  font-family: "Inter";
 }
 
 .team-box {
@@ -134,7 +156,7 @@ body {
   backdrop-filter: blur(5.1px);
   -webkit-backdrop-filter: blur(5.1px);
 
-  font-size: min(24px, 3vw);
+  font-size: min(24px, 4vw);
   font-family: "CirceRounded", sans-serif;
 
   padding: 20px;
@@ -154,17 +176,97 @@ body {
 
 @media screen and (max-width: 1000px) {
   .team-box img {
-    width: 60px;
+    width: 140px;
     border-radius: 8px;
   }
 
   .team-box {
-    width: 60px;
+    width: 140px;
     padding: 10px;
     border-radius: 8px;
   }
 }
 .team-box .position {
-  font-size: min(18px, 2vw);
+  font-size: min(18px, 3vw);
   font-weight: 300;
+}
+
+#head-fourth {
+  color: white;
+  font-size: min(100px, 8vw);
+  font-family: "marghote";
+  margin-left: 25px;
+}
+
+.illustration {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+}
+
+.statistics-banner {
+  color: white;
+  display: flex;
+  background-color: #333;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: min(24px, 4vw);
+
+  margin: 5% 0;
+  height: 150px;
+  align-items: center;
+}
+
+.banner-item {
+  flex: 1;
+  text-align: center;
+}
+
+#gallery-head {
+  color: white;
+  font-size: min(50px, 4vw);
+  text-align: center;
+  font-family: "Inter";
+}
+
+.last-box {
+  background-color: #333;
+  color: white;
+  font-family: "Inter";
+  padding: 25px;
+  font-size: max(18px, 3vw);
+  font-weight: 600;
+
+  margin-top: 50px;
+
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.last-box-button {
+  font-size: max(14px, 1vw);
+  font-weight: 600;
+  padding: 18px 50px;
+  border-radius: 12px;
+
+  border-color: white;
+
+  margin-top: 25px;
+
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(255, 200, 124) 0%,
+    rgb(252, 251, 121) 90%
+  );
+}
+
+footer {
+  color: white;
+  font-family: "Inter";
+  font-size: min(18px, 3vw);
+  padding: 20px;
+  text-align: center;
 }

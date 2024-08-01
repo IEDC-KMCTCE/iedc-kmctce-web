@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:wght@600&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <div id="menubar">
+    <header style="display: flex">
+      <img src="assets/images/logo/iedc-kmct.png" />
+      <div id="menubar" style="flex: 1">
         <ul class="navigation">
           <li><a href="#">Get Involved</a></li>
           <li><a href="#">Team</a></li>
@@ -72,14 +79,12 @@
           src="assets/images/illustrations/office.png"
           alt="illustration-IEDC"
           style="margin: 0"
+          class="illustration"
         />
       </div>
 
       <div style="display: flex; justify-content: center">
-        <button
-          id="explore-btn"
-          style="font-family: roboto; font-weight: 600; letter-spacing: 2px"
-        >
+        <button class="explore-btn">
           Explore<img
             src="assets/images/icons/next.png"
             style="padding-left: 10px"
@@ -113,13 +118,11 @@
       </div>
     </section>
 
-    <img src="assets/images/fillers/line.png" style="margin: 50px" />
+    <img src="assets/images/fillers/line.png" style="margin: 25px" />
     <section>
       <div style="display: flex; margin: 50px 0 50px 50px; flex-wrap: wrap">
         <div style="flex: 1">
-          <p id="second-head" class="plus-jakarta-sans">
-            Think <br />Innovation
-          </p>
+          <p id="second-head">Think <br />Innovation</p>
           <p id="second-caption">
             Dive into the world of creativity and innovation, and master your
             skills through exquisite guidance.
@@ -129,6 +132,7 @@
           <img
             src="assets/images/illustrations/idea.png"
             alt="illustration-idea"
+            class="illustration"
           />
         </div>
       </div>
@@ -140,7 +144,7 @@
     <div>
       <img
         src="assets/images/fillers/line.png"
-        style="position: absolute; right: 50px"
+        style="position: absolute; right: 25px"
       />
     </div>
     <section>
@@ -159,7 +163,7 @@
             />
           </div>
           <div>
-            <p id="third-head" class="plus-jakarta-sans">
+            <p id="third-head">
               Empowering
               <span style="text-decoration-color: #8cff9e"
                 >Business Ideas, </span
@@ -180,7 +184,7 @@
     <div>
       <img
         src="assets/images/fillers/line-yellow.png"
-        style="width: 50%; max-width: 300px; position: absolute; right: 50px"
+        style="width: 50%; max-width: 300px; position: absolute; right: 25px"
       />
     </div>
     <section>
@@ -246,6 +250,89 @@
           </div>
         </div>
       </div>
+      <img
+        src="assets/images/fillers/ellipse-2.png"
+        style="position: absolute; right: 0"
+      />
+    </section>
+    <img
+      src="assets/images/fillers/line.png"
+      style="margin: 25px; margin-top: 80px"
+    />
+    <section>
+      <img
+        src="assets/images/fillers/star.png"
+        style="margin: 50px 0 0 10%; width: 10%; max-width: 80px"
+      />
+      <div style="display: flex; flex-wrap: wrap; margin-left: 50px">
+        <div style="flex: 1">
+          <p id="head-fourth">
+            Build the
+            <span style="color: #47c97e">perfect <br />foundation</span> to
+            elevate your <br />future
+          </p>
+        </div>
+        <div style="display: flex; align-items: center">
+          <img
+            src="assets/images/illustrations/office-small.png"
+            alt="office"
+            class="illustration"
+          />
+        </div>
+      </div>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          margin: 50px 0;
+          font-size: 30px;
+        "
+      >
+        <button class="explore-btn" style="width: 200px; border-radius: 15px">
+          Join Now
+        </button>
+      </div>
+    </section>
+    <section>
+      <div class="statistics-banner">
+        <div class="banner-item">
+          <p>199+</p>
+          <p>Students</p>
+        </div>
+        <div class="banner-item">
+          <p>105+</p>
+          <p>Events</p>
+        </div>
+        <div class="banner-item">
+          <p>300+</p>
+          <p>Active Members</p>
+        </div>
+      </div>
+    </section>
+    <img src="assets/images/fillers/apostrophe/left.png" />
+    <section>
+      <div id="gallery-head">
+        <img src="assets/images/fillers/line-small.png" />
+        <p>Our <b>Gallery</b></p>
+      </div>
+      <div>
+        <img src="assets/images/gallery/banner.png" style="max-width: 100%" />
+      </div>
     </section>
   </body>
+  <section>
+    <div class="last-box">
+      <p>
+        Be a part of one of the most <br />vibrant club in KMCT College of
+        Engineering.
+      </p>
+      <button class="last-box-button">Start Innovation</button>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-box">
+      <div class="footer-head">IEDC KMCTCE</div>
+      <div class="footer-caption">Copyright © 2024. All Rights Reserved.</div>
+    </div>
+  </footer>
 </html>
