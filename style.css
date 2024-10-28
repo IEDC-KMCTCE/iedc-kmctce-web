@@ -8,6 +8,11 @@
   src: url("assets/fonts/marghote/marghote.otf");
 }
 
+@font-face {
+  font-family: "Inkfree";
+  src: url("assets/fonts/Inkfree.ttf");
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto&display=swap");
 
 body {
@@ -20,14 +25,13 @@ body {
 
 .main-head {
   color: white;
-  font-family: "CirceRounded", sans-serif;
+  font-family: "Inkfree", sans-serif;
   font-size: min(58px, 10vw);
-  font-weight: bold;
 }
 
 .main-caption {
   color: white;
-  font-family: "CirceRounded", Geneva, Verdana, sans-serif;
+  font-family: "Inkfree", Geneva, Verdana, sans-serif;
   font-size: min(24px, 5vw);
 }
 
@@ -51,12 +55,12 @@ body {
 }
 
 .message-boxes {
-  display: none;
+  /* display: none; */
 }
 
 .explore-btn {
-  padding: 20px;
-  border-radius: 16px;
+  padding: 15px;
+  border-radius: 31.77px;
 
   font-family: "roboto";
   font-weight: 600;
@@ -64,6 +68,7 @@ body {
 
   background: "#FAF0C98F";
   width: 200px;
+  margin-top: 90px;
 }
 
 @media screen and (max-width: 900px) {
@@ -231,7 +236,7 @@ header {
 
 .last-box {
   background-color: #333;
-  color: white;
+  color: #000603;
   font-family: "Inter";
   padding: 25px;
   font-size: max(18px, 3vw);
