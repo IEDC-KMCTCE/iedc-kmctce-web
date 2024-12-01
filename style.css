@@ -1,307 +1,335 @@
 @font-face {
-  font-family: "CirceRounded";
-  src: url("assets/fonts/CirceRounded/CirceRounded-Regular.otf");
+	font-family: "CirceRounded";
+	src: url("assets/fonts/CirceRounded/CirceRounded-Regular.otf");
 }
 
 @font-face {
-  font-family: "marghote";
-  src: url("assets/fonts/marghote/marghote.otf");
+	font-family: "marghote";
+	src: url("assets/fonts/marghote/marghote.otf");
 }
 
 @font-face {
-  font-family: "Inkfree";
-  src: url("assets/fonts/Inkfree.ttf");
+	font-family: "Inkfree";
+	src: url("assets/fonts/Inkfree.ttf");
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto&display=swap");
 
 body {
-  background-image: url("assets/images/background.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #171513;
+	background-image: url("assets/images/background.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: #171513;
 
-  margin: 0;
+	margin: 0;
 }
 
 .main-head {
-  color: white;
-  font-family: "Inkfree", sans-serif;
-  font-size: min(58px, 10vw);
+	color: white;
+	font-family: "Inkfree", sans-serif;
+	font-size: min(58px, 10vw);
 }
 
 .main-caption {
-  color: white;
-  font-family: "Inkfree", Geneva, Verdana, sans-serif;
-  font-size: min(24px, 5vw);
+	color: white;
+	font-family: "Inkfree", Geneva, Verdana, sans-serif;
+	font-size: min(24px, 5vw);
 }
 
 .message-box {
-  background: rgba(24, 24, 24, 0.41);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.1px);
-  -webkit-backdrop-filter: blur(5.1px);
-  border: 1px solid #585858;
+	background: rgba(24, 24, 24, 0.41);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5.1px);
+	-webkit-backdrop-filter: blur(5.1px);
+	border: 1px solid #585858;
 
-  color: white;
-  border-radius: 27px;
-  font: "roboto";
-  font-weight: 300;
+	color: white;
+	border-radius: 27px;
+	font: "roboto";
+	font-weight: 300;
 
-  padding: 26px;
-  width: 360px;
+	padding: 26px;
+	width: 360px;
 
-  position: absolute;
+	position: absolute;
 }
 
 .message-boxes {
-  display: none;
+	display: none;
 }
 
 header .logo {
-  margin: 10px;
-  height: 55px;
+	margin: 10px;
+	height: 55px;
 }
 .explore-btn {
-  padding: 15px;
-  border-radius: 31.77px;
+	padding: 15px;
+	border-radius: 15px;
 
-  font-family: "roboto";
-  font-weight: 600;
-  letter-spacing: 2px;
+	font-family: "roboto";
+	font-weight: 600;
+	letter-spacing: 2px;
 
-  background: "#FAF0C98F";
-  width: 200px;
-  margin-top: 90px;
+	background: "#FAF0C98F";
+	width: 200px;
+	margin-top: 90px;
+
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 900px) {
-  .message-boxes {
-    display: none;
-  }
+	.message-boxes {
+		display: none;
+	}
 }
 
 #menubar {
-  margin: 0;
-  padding: 30px 20px;
-  overflow: hidden;
-  background-color: #333;
-  border-radius: 20px;
-  font-family: "Inter";
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0; /* Ensure top is set */
-  font-size: small;
-  z-index: 1000; /* Ensure it stays above other elements */
+	margin: 0;
+	padding: 30px 20px;
+	overflow: hidden;
+	background-color: #333;
+	border-radius: 20px;
+	font-family: "Inter";
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0; /* Ensure top is set */
+	font-size: small;
+	z-index: 1000; /* Ensure it stays above other elements */
 }
 
 #menubar ul {
-  padding: 0;
-  list-style-type: none;
-  display: flex;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
 
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  margin: 0;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	margin: 0;
 }
 
 #menubar li {
-  float: left;
-  flex: 1;
+	flex: 1;
+  margin: 10px 0 10px 0;
 }
 
 #menubar li a {
-  display: block;
-  color: white;
-  text-align: center;
-  text-decoration: none;
+	display: block;
+	color: white;
+	text-align: center;
+	text-decoration: none;
 }
 
+.main-box {
+	display: flex;
+	justify-content: center;
+	margin: 80px 0 80px 0;
+}
 @media screen and (min-width: 1199px) {
-  #menubar .iedclogo {
-    display: none;
-  }
-  header {
-    margin: 20px;
-  }
+	#menubar .iedclogo {
+		display: none;
+	}
+	header {
+		margin: 20px;
+	}
 }
 
 @media screen and (max-width: 1200px) {
-  header .logo {
-    display: none;
-  }
+	header .logo {
+		display: none;
+	}
 
-  header .iedclogo {
-    display: block;
-  }
+	header .iedclogo {
+		display: block;
+	}
 
-  #menubar {
-    padding: 0;
-    border-radius: 0;
-    margin-top: 0;
-    padding: 10px;
+	#menubar {
+		padding: 0;
+		border-radius: 10px;
+		margin-top: 0;
+		padding: 10px;
+	}
+
+	header {
+		position: sticky;
+		top: 0; /* Ensures the sticky header sticks to the top of the viewport */
+		z-index: 100; /* Ensure it stays above other elements */
+	}
+
+	.main-box {
+		margin: 30px 0 30px 0;
+	}
+
+  .explore-btn {
+    margin-top: 50px;
   }
-  
+}
+
+#main-illustration {
+	margin: 0;
+	top: 91.53px;
+	left: 1517.92px;
+	aspect-ratio: 509 / 462;
+	max-width: 500px;
 }
 
 #second-head {
-  color: white;
-  font-size: min(100px, 8vw);
-  font-weight: 600;
+	color: white;
+	font-size: min(100px, 8vw);
+	font-weight: 600;
 
-  font-family: "Plus Jakarta Sans", sans-serif;
+	font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 #second-caption {
-  color: white;
-  font-family: "CirceRounded", Geneva, Verdana, sans-serif;
+	color: white;
+	font-family: "CirceRounded", Geneva, Verdana, sans-serif;
 
-  font-size: min(18px, 5vw);
+	font-size: min(18px, 5vw);
 }
 
 #third-head {
-  color: white;
-  font-size: max(20px, 4vw);
-  font-weight: 100;
+	color: white;
+	font-size: max(20px, 4vw);
+	font-weight: 100;
 
-  font-family: "Plus Jakarta Sans", sans-serif;
+	font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 #third-head span {
-  font-weight: 600;
-  text-decoration: underline;
-  text-decoration-thickness: 20%;
+	font-weight: 600;
+	text-decoration: underline;
+	text-decoration-thickness: 20%;
 }
 
 #team-head {
-  color: white;
-  font-size: min(50px, 4vw);
-  text-align: center;
-  font-family: "Inter";
+	color: white;
+	font-size: min(50px, 4vw);
+	text-align: center;
+	font-family: "Inter";
 }
 
 .team-box {
-  color: white;
-  background: rgba(65, 64, 64, 0.41);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.1px);
-  -webkit-backdrop-filter: blur(5.1px);
+	color: white;
+	background: rgba(65, 64, 64, 0.41);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5.1px);
+	-webkit-backdrop-filter: blur(5.1px);
 
-  font-size: min(24px, 4vw);
-  font-family: "CirceRounded", sans-serif;
+	font-size: min(24px, 4vw);
+	font-family: "CirceRounded", sans-serif;
 
-  padding: 20px;
+	padding: 20px;
 
-  justify-content: center;
-  align-items: center;
+	justify-content: center;
+	align-items: center;
 
-  text-align: center;
+	text-align: center;
 
-  margin: 10px;
-  /* border: 1px solid #585858; */
+	margin: 10px;
+	/* border: 1px solid #585858; */
 }
 
 .team-box img {
-  border-radius: 16px;
+	border-radius: 16px;
 }
 
 @media screen and (max-width: 1000px) {
-  .team-box img {
-    width: 140px;
-    border-radius: 8px;
-  }
+	.team-box img {
+		width: 140px;
+		border-radius: 8px;
+	}
 
-  .team-box {
-    width: 140px;
-    padding: 10px;
-    border-radius: 8px;
-  }
+	.team-box {
+		width: 140px;
+		padding: 10px;
+		border-radius: 8px;
+	}
 }
 .team-box .position {
-  font-size: min(18px, 3vw);
-  font-weight: 300;
+	font-size: min(18px, 3vw);
+	font-weight: 300;
 }
 
 #head-fourth {
-  color: white;
-  font-size: min(100px, 8vw);
-  font-family: "marghote";
-  margin-left: 25px;
+	color: white;
+	font-size: min(100px, 8vw);
+	font-family: "marghote";
+	margin-left: 25px;
 }
 
 .illustration {
-  width: 100%;
-  height: auto;
-  max-width: 800px;
+	width: 100%;
+	height: auto;
+	max-width: 800px;
 }
 
 .statistics-banner {
-  color: white;
-  display: flex;
-  background-color: #333;
-  font-family: "Inter";
-  font-weight: 600;
-  font-size: min(24px, 4vw);
+	color: white;
+	display: flex;
+	background-color: #333;
+	font-family: "Inter";
+	font-weight: 600;
+	font-size: min(24px, 4vw);
 
-  margin: 5% 0;
-  height: 150px;
-  align-items: center;
+	margin: 5% 0;
+	height: 150px;
+	align-items: center;
 }
 
 .banner-item {
-  flex: 1;
-  text-align: center;
+	flex: 1;
+	text-align: center;
 }
 
 #gallery-head {
-  color: white;
-  font-size: min(50px, 4vw);
-  text-align: center;
-  font-family: "Inter";
+	color: white;
+	font-size: min(50px, 4vw);
+	text-align: center;
+	font-family: "Inter";
 }
 
 .last-box {
-  background-color: #333;
-  color: #000603;
-  font-family: "Inter";
-  padding: 25px;
-  font-size: max(18px, 3vw);
-  font-weight: 600;
+	background-color: #333;
+	color: #000603;
+	font-family: "Inter";
+	padding: 25px;
+	font-size: max(18px, 3vw);
+	font-weight: 600;
 
-  margin-top: 50px;
+	margin-top: 50px;
 
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.2);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
 }
 
 .last-box-button {
-  font-size: max(14px, 1vw);
-  font-weight: 600;
-  padding: 18px 50px;
-  border-radius: 12px;
+	font-size: max(14px, 1vw);
+	font-weight: 600;
+	padding: 18px 50px;
+	border-radius: 12px;
 
-  border-color: white;
+	border-color: white;
 
-  margin-top: 25px;
+	margin-top: 25px;
 
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgb(255, 200, 124) 0%,
-    rgb(252, 251, 121) 90%
-  );
+	background: radial-gradient(
+		circle at 10% 20%,
+		rgb(255, 200, 124) 0%,
+		rgb(252, 251, 121) 90%
+	);
 }
 
 footer {
-  color: white;
-  font-family: "Inter";
-  font-size: min(18px, 3vw);
-  padding: 20px;
-  text-align: center;
+	color: white;
+	font-family: "Inter";
+	font-size: min(18px, 3vw);
+	padding: 20px;
+	text-align: center;
 }
