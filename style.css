@@ -21,6 +21,8 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-color: #171513;
+
+  margin: 0;
 }
 
 .main-head {
@@ -55,9 +57,13 @@ body {
 }
 
 .message-boxes {
-  /* display: none; */
+  display: none;
 }
 
+header .logo {
+  margin: 10px;
+  height: 55px;
+}
 .explore-btn {
   padding: 15px;
   border-radius: 31.77px;
@@ -77,13 +83,9 @@ body {
   }
 }
 
-header {
-  margin: 2vw 0;
-}
-
 #menubar {
   margin: 0;
-  padding: 10px 20px;
+  padding: 30px 20px;
   overflow: hidden;
   background-color: #333;
   border-radius: 20px;
@@ -92,7 +94,6 @@ header {
   position: sticky;
   top: 0; /* Ensure top is set */
   font-size: small;
-  margin: 0 20px;
   z-index: 1000; /* Ensure it stays above other elements */
 }
 
@@ -103,6 +104,8 @@ header {
 
   justify-content: center;
   align-items: center;
+  height: 100%;
+  margin: 0;
 }
 
 #menubar li {
@@ -115,6 +118,33 @@ header {
   color: white;
   text-align: center;
   text-decoration: none;
+}
+
+@media screen and (min-width: 1199px) {
+  #menubar .iedclogo {
+    display: none;
+  }
+  header {
+    margin: 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  header .logo {
+    display: none;
+  }
+
+  header .iedclogo {
+    display: block;
+  }
+
+  #menubar {
+    padding: 0;
+    border-radius: 0;
+    margin-top: 0;
+    padding: 10px;
+  }
+  
 }
 
 #second-head {
