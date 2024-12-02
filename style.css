@@ -61,9 +61,10 @@ body {
 }
 
 header .logo {
-	margin: 10px;
+	margin: 10px 30px 10px 30px;
 	height: 55px;
 }
+
 .explore-btn {
 	padding: 15px;
 	border-radius: 15px;
@@ -76,7 +77,7 @@ header .logo {
 	width: 200px;
 	margin-top: 90px;
 
-  opacity: 0.8;
+	opacity: 0.8;
 }
 
 @media screen and (max-width: 900px) {
@@ -86,17 +87,14 @@ header .logo {
 }
 
 #menubar {
-	margin: 0;
-	padding: 30px 20px;
+	padding: 20px 10px;
+	margin-left: 20px;
+	margin-right: 20px;
 	overflow: hidden;
 	background-color: #333;
 	border-radius: 20px;
 	font-family: "Inter";
-	position: -webkit-sticky; /* Safari */
-	position: sticky;
-	top: 0; /* Ensure top is set */
 	font-size: small;
-	z-index: 1000; /* Ensure it stays above other elements */
 }
 
 #menubar ul {
@@ -112,7 +110,7 @@ header .logo {
 
 #menubar li {
 	flex: 1;
-  margin: 10px 0 10px 0;
+	margin: 10px 0 10px 0;
 }
 
 #menubar li a {
@@ -127,6 +125,7 @@ header .logo {
 	justify-content: center;
 	margin: 80px 0 80px 0;
 }
+
 @media screen and (min-width: 1199px) {
 	#menubar .iedclogo {
 		display: none;
@@ -148,23 +147,25 @@ header .logo {
 	#menubar {
 		padding: 0;
 		border-radius: 10px;
-		margin-top: 0;
+		margin-top: 20px;
 		padding: 10px;
 	}
 
 	header {
 		position: sticky;
-		top: 0; /* Ensures the sticky header sticks to the top of the viewport */
-		z-index: 100; /* Ensure it stays above other elements */
+		top: 10px;
+		z-index: 100;
+		height: 85px;
+
 	}
 
 	.main-box {
 		margin: 30px 0 30px 0;
 	}
 
-  .explore-btn {
-    margin-top: 50px;
-  }
+	.explore-btn {
+		margin-top: 50px;
+	}
 }
 
 #main-illustration {
@@ -294,7 +295,7 @@ header .logo {
 
 .last-box {
 	background-color: #333;
-	color: #000603;
+	color: white;
 	font-family: "Inter";
 	padding: 25px;
 	font-size: max(18px, 3vw);
@@ -327,9 +328,78 @@ header .logo {
 }
 
 footer {
-	color: white;
-	font-family: "Inter";
-	font-size: min(18px, 3vw);
+	background-color: #1c1c1c;
+	color: #ffffff;
 	padding: 20px;
+	font-family: Arial, sans-serif;
+}
+
+
+footer .footer-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 20px 0;
+}
+
+footer .footer-section {
+	flex: 1;
+	margin: 10px;
+}
+
+footer .footer-logo {
+	height: 55px;
+	margin: 10px 0;
+}
+
+footer h4 {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+footer p {
+	font-size: 14px;
+	margin: 5px 0;
+}
+
+footer .social-icons {
+	display: flex;
+	gap: 10px;
+}
+
+footer .social-icons a img {
+	width: 24px;
+	height: 24px;
+	transition: transform 0.2s ease-in-out;
+}
+
+footer .social-icons a img:hover {
+	transform: scale(1.2);
+}
+
+footer .footer-bottom {
 	text-align: center;
+	padding: 10px 0;
+	border-top: 1px solid #444;
+	margin-top: 20px;
+	font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+	footer .footer-container {
+		flex-direction: row;
+	}
+
+  footer .logos {
+    display: flex;
+  }
+
+	footer .footer-section {
+		text-align: left;
+		width: 100%;
+	}
+	footer .footer-logo {
+		margin: 0 auto;
+	}
 }
