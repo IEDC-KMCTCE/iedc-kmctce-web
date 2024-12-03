@@ -2,12 +2,12 @@
 	{
 		"name": "Majida C.V.",
 		"position": "Nodal Officer",
-		"profile_img": "/assets/images/profiles/majidacv.png"
+		"profile_img": "assets/images/profiles/majidacv.png"
 	},
 	{
 		"name": "Midhun K.R.",
 		"position": "Assistant Professor",
-		"profile_img": "/assets/images/profiles/midhunkr.png"
+		"profile_img": "assets/images/profiles/midhunkr.png"
 	},
 	{
 		"name": "Hanan Muhammed Nasseer",
@@ -22,7 +22,7 @@
 	{
 		"name": "Binshad",
 		"position": "Quality & Operations Lead",
-		"profile_img": "/assets/images/profiles/binshad.jpeg"
+		"profile_img": "assets/images/profiles/binshad.jpeg"
 	},
 	{
 		"name": "Minhaj P.K.",
@@ -52,11 +52,11 @@
 	{
 		"name": "Jihan Rouza",
 		"position": "Women Innovation Lead",
-		"profile_img": "/assets/images/profiles/rouza.jpeg"
+		"profile_img": "assets/images/profiles/rouza.jpeg"
 	},
 	{
 		"name": "Fathima Hudha",
 		"position": "IPR & Research Lead",
-		"profile_img": "/assets/images/profiles/hudha.webp"
+		"profile_img": "assets/images/profiles/hudha.webp"
 	}
 ]
