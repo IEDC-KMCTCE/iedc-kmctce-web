@@ -231,6 +231,12 @@ header .logo {
 	font-family: "Inter";
 }
 
+#team-boxes {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
 .team-box {
 	color: white;
 	background: rgba(65, 64, 64, 0.41);
