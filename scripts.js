@@ -1,5 +1,5 @@
 loadTeamData = () => {
-	fetch("/data/team.json")
+	fetch("data/team.json")
 		.then((response) => {
 			if (!response.ok) {
 				throw new Error("HTTP error " + response.status);
