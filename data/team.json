@@ -1,47 +1,62 @@
 [
 	{
-		"name": "Majida Cheriya Veettil",
+		"name": "Majida C.V.",
 		"position": "Nodal Officer",
-		"profile_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpd4mJRIUwqgE8D_Z2znANEbtiz4GhI4M8NQ&s"
+		"profile_img": "/assets/images/profiles/majidacv.png"
 	},
 	{
-		"name": "Sreejith S",
+		"name": "Midhun K.R.",
 		"position": "Assistant Professor",
+		"profile_img": "/assets/images/profiles/midhunkr.png"
+	},
+	{
+		"name": "Hanan Muhammed Nasseer",
+		"position": "Student Lead",
 		"profile_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpd4mJRIUwqgE8D_Z2znANEbtiz4GhI4M8NQ&s"
 	},
 	{
-		"name": "Anjali N",
-		"position": "Student Coordinator",
+		"name": "Muhammed Zafar M.M.",
+		"position": "Student Lead",
 		"profile_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpd4mJRIUwqgE8D_Z2znANEbtiz4GhI4M8NQ&s"
 	},
 	{
-		"name": "Rahul R",
-		"position": "Technical Lead",
+		"name": "Binshad",
+		"position": "Quality & Operations Lead",
+		"profile_img": "/assets/images/profiles/binshad.jpeg"
+	},
+	{
+		"name": "Minhaj P.K.",
+		"position": "Finance Lead",
 		"profile_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpd4mJRIUwqgE8D_Z2znANEbtiz4GhI4M8NQ&s"
 	},
 	{
-		"name": "Aisha K",
-		"position": "Marketing Head",
+		"name": "Gopika Suneej",
+		"position": "Creative & Innovation Lead",
 		"profile_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpd4mJRIUwqgE8D_Z2znANEbtiz4GhI4M8NQ&s"
 	},
 	{
-		"name": "Vishnu P",
-		"position": "Design Lead",
+		"name": "Sreedev V.P.",
+		"position": "Technology Lead",
 		"profile_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpd4mJRIUwqgE8D_Z2znANEbtiz4GhI4M8NQ&s"
 	},
 	{
-		"name": "Neha S",
-		"position": "Finance Manager",
+		"name": "Muhammed Mehfil",
+		"position": "Brand & Marketing Lead",
 		"profile_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpd4mJRIUwqgE8D_Z2znANEbtiz4GhI4M8NQ&s"
 	},
 	{
-		"name": "Arjun M",
-		"position": "Operations Manager",
+		"name": "Bakir",
+		"position": "Community Lead",
 		"profile_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpd4mJRIUwqgE8D_Z2znANEbtiz4GhI4M8NQ&s"
 	},
 	{
-		"name": "Divya R",
-		"position": "HR Manager",
-		"profile_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpd4mJRIUwqgE8D_Z2znANEbtiz4GhI4M8NQ&s"
+		"name": "Jihan Rouza",
+		"position": "Women Innovation Lead",
+		"profile_img": "/assets/images/profiles/rouza.jpeg"
+	},
+	{
+		"name": "Fathima Hudha",
+		"position": "IPR & Research Lead",
+		"profile_img": "/assets/images/profiles/hudha.webp"
 	}
 ]
