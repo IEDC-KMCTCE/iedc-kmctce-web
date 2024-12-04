@@ -281,8 +281,8 @@ header .logo {
 
 @media screen and (max-width: 1200px) {
 	#team-boxes {
-		padding-left: 25px;
-		padding-right: 25px;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 	.team-box {
 		padding: 10px;
