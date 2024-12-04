@@ -52,4 +52,89 @@ const createTeamBox = (member) => {
 	return teamBox;
 };
 
-document.onload = loadTeamData();
+const loadEvents = () => {
+	fetch("data/events.json")
+		.then((response) => {
+			if (!response.ok) {
+				throw new Error("HTTP error " + response.status);
+			}
+			return response.json();
+		})
+		.then((data) => {
+			updatePageWithEventData(data);
+		})
+		.catch((error) => {
+			console.error("There was an error!", error);
+		});
+};
+
+const updatePageWithEventData = (data) => {
+	const gallery = document.getElementById("gallery");
+	if (!gallery) {
+		console.error("Element with ID 'gallery' not found.");
+		return;
+	}
+
+	const [leftData, rightData] = [
+		data.slice(0, Math.floor(data.length / 2)),
+		data.slice(Math.floor(data.length / 2)),
+	];
+
+	const appendAndDuplicate = (gallery, data) => {
+		data.forEach((eventImages) => {
+			createEventGallery(eventImages).forEach((eventBox) =>
+				gallery.appendChild(eventBox)
+			);
+		});
+		// Duplicate the entire row
+		Array.from(gallery.children).forEach((child) =>
+			gallery.appendChild(child.cloneNode(true))
+		);
+	};
+
+	// Update both galleries
+	[
+		{ gallery: document.getElementById("gallery-left"), data: leftData },
+		{ gallery: document.getElementById("gallery-right"), data: rightData },
+	].forEach(({ gallery, data }) => {
+		appendAndDuplicate(gallery, data);
+		// Adjust parent container widths
+		const totalWidth = Array.from(gallery.children).reduce(
+			(sum, child) => sum + child.offsetWidth,
+			0
+		);
+		gallery.parentElement.style.width = `${totalWidth / 2}px`;
+	});
+};
+
+const createEventGallery = (eventImages) => {
+	const eventImagesArray = [];
+
+	eventImages.pictures.forEach((picture) => {
+		const eventBox = document.createElement("div");
+		eventBox.classList.add("event-box");
+
+		const galleryOverlay = document.createElement("div");
+		galleryOverlay.classList.add("gallery-overlay");
+
+		const overlayText = document.createElement("p");
+		overlayText.textContent = eventImages.name;
+		galleryOverlay.appendChild(overlayText);
+
+		eventBox.appendChild(galleryOverlay);
+
+		const img = document.createElement("img");
+		img.src = picture;
+		img.alt = eventImages.name;
+		img.classList.add("gallery-image");
+
+		eventBox.appendChild(img);
+		eventImagesArray.push(eventBox);
+	});
+	return eventImagesArray;
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+	loadTeamData();
+	loadEvents();
+});

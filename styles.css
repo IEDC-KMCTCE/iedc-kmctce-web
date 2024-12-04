@@ -337,9 +337,119 @@ header .logo {
 	padding: 10px;
 }
 
-.banner-item {
+#gallery {
+	overflow: hidden;
+}
+
+#gallery-left-container,
+#gallery-right-container {
+	position: relative;
+	display: flex;
+	overflow: scroll;
+	margin-bottom: 20px;
+	height: 300px;
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+}
+
+#gallery-left,
+#gallery-right {
+	position: absolute;
+	display: flex;
 	flex: 1;
+
+	/* Hide scrollbar */
+}
+
+#gallery-left-container::-webkit-scrollbar,
+#gallery-right-container::-webkit-scrollbar {
+	/* Hide scrollbar */
+	display: none; /* Chrome, Safari, Opera*/
+}
+
+#gallery-left {
+	animation: scroll-left 30s ease-in-out infinite;
+}
+
+#gallery-right {
+	animation: scroll-right 30s ease-in-out infinite;
+}
+
+@keyframes scroll-left {
+	0% {
+		left: 0%; /* Start from the right */
+	}
+	50% {
+		left: -100%; /* End at the left */
+	}
+	100% {
+		left: 0%; /* End at the left */
+	}
+}
+
+@keyframes scroll-right {
+	0% {
+		left: -100%; /* Start from the right */
+	}
+	50% {
+		left: 0%; /* End at the left */
+	}
+	100% {
+		left: -100%; /* End at the left */
+	}
+}
+
+.event-box {
+	position: relative;
+	margin: 0 10px 0 10px;
+	border-radius: 10px;
+}
+
+.event-box p {
+	font-size: 24px;
+	color: white;
+	font-weight: bold;
+	font-family: "Poppins", sans-serif;
+	text-transform: uppercase;
+
+	margin: 0;
+
+	align-content: center;
+	width: 100%;
+	height: 100%;
 	text-align: center;
+
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+}
+
+.gallery-image {
+	height: 300px;
+	width: 500px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.gallery-overlay {
+	position: absolute;
+	border-radius: 10px;
+	top: 0;
+	left: 0;
+	width: 500px;
+	height: 300px;
+
+	background-color: rgb(14, 23, 52); /* Blue color with 50% transparency */
+	z-index: 100;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+}
+
+.gallery-overlay:hover {
+	opacity: 0.6;
+}
+
+.gallery-overlay:hover p {
+	opacity: 1;
 }
 
 #gallery-head {
