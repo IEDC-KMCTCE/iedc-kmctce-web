@@ -157,9 +157,7 @@ const autoScrollGallery = () => {
 		if (leftWidth < -maxLeftWidth || leftWidth > minLeftWidth) {
 			leftStep *= -1;
 			rightStep *= -1;
-		}
-
-		if (rightWidth < -maxRightWidth || rightWidth > minRightWidth) {
+		} else if (rightWidth < -maxRightWidth || rightWidth > minRightWidth) {
 			rightStep *= -1;
 			leftStep *= -1;
 		}
