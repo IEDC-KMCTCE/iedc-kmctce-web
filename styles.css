@@ -13,6 +13,8 @@
 	src: url("assets/fonts/Inkfree.ttf");
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto&display=swap");
+
 html {
 	scroll-behavior: smooth;
 }
@@ -23,8 +25,6 @@ html {
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* Internet Explorer */
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto&display=swap");
 
 body {
 	background-image: url("assets/images/background.png");

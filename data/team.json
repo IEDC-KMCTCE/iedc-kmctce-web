@@ -10,14 +10,14 @@
 		"profile_img": "assets/images/profiles/midhunkr.png"
 	},
 	{
-		"name": "Hanan Muhammed Nasseer",
+		"name": "Hanan Muhammed ",
 		"position": "Student Lead",
-		"profile_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpd4mJRIUwqgE8D_Z2znANEbtiz4GhI4M8NQ&s"
+		"profile_img": "assets/images/profiles/hanan.jpeg"
 	},
 	{
-		"name": "Muhammed Zafar M.M.",
+		"name": "Muhammed Zafar",
 		"position": "Student Lead",
-		"profile_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpd4mJRIUwqgE8D_Z2znANEbtiz4GhI4M8NQ&s"
+		"profile_img": "assets/images/profiles/zafar.jpeg"
 	},
 	{
 		"name": "Binshad",
@@ -27,27 +27,27 @@
 	{
 		"name": "Minhaj P.K.",
 		"position": "Finance Lead",
-		"profile_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpd4mJRIUwqgE8D_Z2znANEbtiz4GhI4M8NQ&s"
+		"profile_img": "assets/images/profiles/minhaj.jpeg"
 	},
 	{
 		"name": "Gopika Suneej",
 		"position": "Creative & Innovation Lead",
-		"profile_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpd4mJRIUwqgE8D_Z2znANEbtiz4GhI4M8NQ&s"
+		"profile_img": "assets/images/profiles/gopika.png"
 	},
 	{
 		"name": "Sreedev V.P.",
 		"position": "Technology Lead",
-		"profile_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpd4mJRIUwqgE8D_Z2znANEbtiz4GhI4M8NQ&s"
+		"profile_img": "assets/images/profiles/sreedev.png"
 	},
 	{
 		"name": "Muhammed Mehfil",
 		"position": "Brand & Marketing Lead",
-		"profile_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpd4mJRIUwqgE8D_Z2znANEbtiz4GhI4M8NQ&s"
+		"profile_img": "assets/images/profiles/mehfil.png"
 	},
 	{
 		"name": "Bakir",
 		"position": "Community Lead",
-		"profile_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpd4mJRIUwqgE8D_Z2znANEbtiz4GhI4M8NQ&s"
+		"profile_img": "assets/images/profiles/bakir.png"
 	},
 	{
 		"name": "Jihan Rouza",
