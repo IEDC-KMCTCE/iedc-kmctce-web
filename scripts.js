@@ -140,7 +140,7 @@ const autoScrollGallery = () => {
 	const minRightWidth = 0;
 
 	let leftStep = -1;
-	let rightStep = -1;
+	let rightStep = 1;
 
 	// Set the gallery to the initial position
 	galleryLeft.style.left = "0px";
@@ -156,10 +156,12 @@ const autoScrollGallery = () => {
 		// If borders are reached, change the direction
 		if (leftWidth < -maxLeftWidth || leftWidth > minLeftWidth) {
 			leftStep *= -1;
+			rightStep *= -1;
 		}
 
 		if (rightWidth < -maxRightWidth || rightWidth > minRightWidth) {
 			rightStep *= -1;
+			leftStep *= -1;
 		}
 
 		galleryLeft.style.left = `${leftWidth + leftStep}px`;
