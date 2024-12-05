@@ -15,7 +15,6 @@
 		/>
 	</head>
 	<body>
-		<div id="image-viewer"></div>
 		<header style="display: flex">
 			<img
 				src="assets/images/logo/iedc.svg"
@@ -35,10 +34,10 @@
 							style="aspect-ratio: 1"
 						/>
 					</li>
-					<li><a href="#">Join</a></li>
-					<li><a href="#">Team</a></li>
-					<li><a href="#">Events</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="#join-section">Join</a></li>
+					<li><a href="#team-section">Team</a></li>
+					<li><a href="#gallery-section">Gallery</a></li>
+					<li><a href="#footer-container">Contact</a></li>
 				</ul>
 			</div>
 			<img
@@ -48,9 +47,9 @@
 			/>
 		</header>
 		<section>
-			<div class="main-box">
+			<div id="main-box">
 				<div>
-					<div class="main-head" style="text-align: center">
+					<div id="main-head" style="text-align: center">
 						Building Together, Thriving Forever
 					</div>
 					<div
@@ -61,7 +60,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="message-boxes">
+			<div id="message-boxes">
 				<div class="message-box" style="left: 25px; top: 300px">
 					<div>
 						"They way to get started is to quit talking and begin
@@ -104,13 +103,23 @@
 				/>
 			</div>
 
-			<div style="display: flex; justify-content: center">
-				<button class="explore-btn">
-					Explore<img
-						src="assets/images/icons/next.png"
-						style="padding-left: 10px"
-					/>
-				</button>
+			<div
+				style="display: flex; justify-content: center"
+				class="no-select"
+			>
+				<a href="#explore-section" style="text-decoration: none">
+					<button class="explore-btn">
+						Explore
+						<img
+							src="assets/images/icons/next.svg"
+							style="
+								padding-left: 10px;
+								aspect-ratio: 1;
+								height: 10px;
+							"
+						/>
+					</button>
+				</a>
 			</div>
 
 			<div style="justify-content: center; display: flex">
@@ -148,7 +157,7 @@
 		</section>
 
 		<img src="assets/images/fillers/line.png" style="margin: 25px" />
-		<section>
+		<section id="explore-section">
 			<div
 				style="display: flex; margin: 50px 0 50px 50px; flex-wrap: wrap"
 			>
@@ -229,7 +238,7 @@
 				"
 			/>
 		</div>
-		<section>
+		<section id="team-section">
 			<div
 				style="
 					display: flex;
@@ -262,7 +271,7 @@
 			src="assets/images/fillers/line.png"
 			style="margin: 25px; margin-top: 80px"
 		/>
-		<section>
+		<section id="join-section">
 			<img
 				src="assets/images/fillers/star.png"
 				style="margin: 50px 0 0 10%; width: 10%; max-width: 80px"
@@ -293,12 +302,16 @@
 					font-size: 30px;
 				"
 			>
-				<button
-					class="explore-btn"
-					style="width: 171.2px; height: 48px"
+				<a
+					href="https://docs.google.com/forms/d/e/1FAIpQLSc8I_pChuBpRAHTW9f90yKNLwmWbAcxctLv5Q6DwRKKW7Z4jg/viewform"
 				>
-					Join Now
-				</button>
+					<button
+						class="explore-btn"
+						style="width: 171.2px; height: 48px"
+					>
+						Join Now
+					</button>
+				</a>
 			</div>
 		</section>
 		<section>
@@ -322,7 +335,7 @@
 			</div>
 		</section>
 		<img src="assets/images/fillers/apostrophe/left.png" />
-		<section>
+		<section id="gallery-section">
 			<div id="gallery-head">
 				<img src="assets/images/fillers/line-small.png" />
 				<p>Our <b>Gallery</b></p>
@@ -367,11 +380,15 @@
 				Be a part of one of the most <br />vibrant club in KMCT College
 				of Engineering.
 			</p>
-			<button class="last-box-button">Start Innovation</button>
+			<a
+				href="https://docs.google.com/forms/d/e/1FAIpQLSc8I_pChuBpRAHTW9f90yKNLwmWbAcxctLv5Q6DwRKKW7Z4jg/viewform"
+			>
+				<button class="last-box-button">Start Innovation</button>
+			</a>
 		</div>
 	</section>
 	<footer>
-		<div class="footer-container">
+		<div id="footer-container" class="no-click">
 			<div class="footer-section logos">
 				<img
 					src="assets/images/logo/iedc.svg"

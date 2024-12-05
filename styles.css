@@ -13,6 +13,17 @@
 	src: url("assets/fonts/Inkfree.ttf");
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
+.no-select {
+	user-select: none;
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer */
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto&display=swap");
 
 body {
@@ -25,7 +36,100 @@ body {
 	margin: 0;
 }
 
-.main-head {
+header {
+	position: sticky;
+	z-index: 100;
+	top: 50px;
+}
+
+header .logo {
+	margin: 10px 30px 10px 30px;
+	height: 55px;
+
+	filter: drop-shadow(5 5 0.75rem black);
+}
+
+#menubar {
+	padding: 20px 10px;
+	margin-left: 50px;
+	margin-right: 50px;
+	overflow: hidden;
+	background-color: #333;
+	border-radius: 25px;
+	font-family: "Inter";
+	font-weight: bold;
+	font-size: min(15px, 3vw);
+}
+
+#menubar ul {
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	margin: 0;
+}
+
+#menubar li {
+	flex: 1;
+	margin: 10px 0 10px 0;
+}
+
+#menubar li a {
+	display: block;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+}
+
+#main-box {
+	display: flex;
+	justify-content: center;
+	margin: 80px 0 80px 0;
+}
+
+@media screen and (min-width: 1199px) {
+	#menubar .iedclogo {
+		display: none;
+	}
+	header {
+		margin: 20px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	header .logo {
+		display: none;
+	}
+
+	header .iedclogo {
+		display: block;
+	}
+
+	#menubar {
+		padding: 0;
+		border-radius: 10px;
+		margin-top: 20px;
+		padding: 10px;
+	}
+
+	header {
+		top: 10px;
+		height: 85px;
+	}
+
+	#main-box {
+		margin: 30px 0 30px 0;
+	}
+
+	.explore-btn {
+		margin-top: 50px;
+	}
+}
+
+#main-head {
 	color: white;
 	font-family: "Inkfree", sans-serif;
 	font-size: min(58px, 10vw);
@@ -35,6 +139,14 @@ body {
 	color: white;
 	font-family: "Inkfree", Geneva, Verdana, sans-serif;
 	font-size: min(24px, 5vw);
+}
+
+#main-illustration {
+	margin: 0;
+	top: 91.53px;
+	left: 1517.92px;
+	aspect-ratio: 509 / 462;
+	max-width: 500px;
 }
 
 .message-box {
@@ -60,11 +172,6 @@ body {
 	.message-box {
 		display: none;
 	}
-}
-
-header .logo {
-	margin: 10px 30px 10px 30px;
-	height: 55px;
 }
 
 .explore-btn {
@@ -107,96 +214,6 @@ header .logo {
 	}
 }
 
-#menubar {
-	padding: 20px 10px;
-	margin-left: 50px;
-	margin-right: 50px;
-	overflow: hidden;
-	background-color: #333;
-	border-radius: 25px;
-	font-family: "Inter";
-	font-weight: bold;
-	font-size: min(15px, 3vw);
-}
-
-#menubar ul {
-	padding: 0;
-	list-style-type: none;
-	display: flex;
-
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-	margin: 0;
-}
-
-#menubar li {
-	flex: 1;
-	margin: 10px 0 10px 0;
-}
-
-#menubar li a {
-	display: block;
-	color: white;
-	text-align: center;
-	text-decoration: none;
-}
-
-.main-box {
-	display: flex;
-	justify-content: center;
-	margin: 80px 0 80px 0;
-}
-
-@media screen and (min-width: 1199px) {
-	#menubar .iedclogo {
-		display: none;
-	}
-	header {
-		margin: 20px;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-	header .logo {
-		display: none;
-	}
-
-	header .iedclogo {
-		display: block;
-	}
-
-	#menubar {
-		padding: 0;
-		border-radius: 10px;
-		margin-top: 20px;
-		padding: 10px;
-	}
-
-	header {
-		position: sticky;
-		top: 10px;
-		z-index: 100;
-		height: 85px;
-	}
-
-	.main-box {
-		margin: 30px 0 30px 0;
-	}
-
-	.explore-btn {
-		margin-top: 50px;
-	}
-}
-
-#main-illustration {
-	margin: 0;
-	top: 91.53px;
-	left: 1517.92px;
-	aspect-ratio: 509 / 462;
-	max-width: 500px;
-}
-
 #second-head {
 	color: white;
 	font-size: min(100px, 8vw);
@@ -210,6 +227,19 @@ header .logo {
 	font-family: "CirceRounded", Geneva, Verdana, sans-serif;
 
 	font-size: min(24px, 5vw);
+}
+
+section {
+	scroll-margin-top: 100px;
+
+	user-select: none;
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer */
+}
+
+#join-section {
+	scroll-margin-top: 0px;
 }
 
 #third-head {
@@ -281,11 +311,11 @@ header .logo {
 
 @media screen and (max-width: 1200px) {
 	#team-boxes {
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: 0px;
+		padding-right: 0px;
 	}
 	.team-box {
-		padding: 10px;
+		padding: 0px;
 		width: 120px;
 		margin: 10px;
 	}
@@ -297,6 +327,7 @@ header .logo {
 	}
 	.team-box .position {
 		font-size: 14px;
+		align-self: baseline;
 	}
 }
 
@@ -371,6 +402,11 @@ header .logo {
 	position: relative;
 	margin: 0 10px 0 10px;
 	border-radius: 10px;
+
+	user-select: none;
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer */
 }
 
 .event-box p {
@@ -383,8 +419,8 @@ header .logo {
 	margin: 0;
 
 	align-content: center;
-	width: 100%;
 	height: 100%;
+	width: 100%;
 	text-align: center;
 
 	opacity: 0;
@@ -403,13 +439,30 @@ header .logo {
 	border-radius: 10px;
 	top: 0;
 	left: 0;
-	width: 500px;
 	height: 300px;
+	width: 500px;
 
 	background-color: rgb(14, 23, 52); /* Blue color with 50% transparency */
-	z-index: 100;
+	z-index: 10;
 	opacity: 0;
 	transition: opacity 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 1200px) {
+	#gallery-left-container,
+	#gallery-right-container {
+		height: 150px;
+	}
+
+	.gallery-image {
+		height: 150px;
+		width: 250px;
+	}
+
+	.gallery-overlay {
+		height: 150px;
+		width: 250px;
+	}
 }
 
 .gallery-overlay:hover {
@@ -468,7 +521,7 @@ footer {
 	font-family: Arial, sans-serif;
 }
 
-footer .footer-container {
+#footer-container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -476,12 +529,12 @@ footer .footer-container {
 	padding: 20px 0;
 }
 
-footer .footer-section {
+.footer-section {
 	flex: 1;
 	margin: 10px;
 }
 
-footer .footer-logo {
+.footer-logo {
 	height: 55px;
 	margin: 10px 0;
 }
