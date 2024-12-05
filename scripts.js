@@ -1,17 +1,14 @@
-loadTeamData = () => {
-	fetch("data/team.json")
-		.then((response) => {
-			if (!response.ok) {
-				throw new Error("HTTP error " + response.status);
-			}
-			return response.json();
-		})
-		.then((data) => {
-			updatePageWithTeamData(data);
-		})
-		.catch((error) => {
-			console.error("There was an error!", error);
-		});
+const loadTeamData = async () => {
+	try {
+		const response = await fetch("data/team.json");
+		if (!response.ok) {
+			throw new Error("HTTP error " + response.status);
+		}
+		const data = await response.json();
+		updatePageWithTeamData(data);
+	} catch (error) {
+		console.error("There was an error!", error);
+	}
 };
 
 const updatePageWithTeamData = (data) => {
@@ -52,20 +49,17 @@ const createTeamBox = (member) => {
 	return teamBox;
 };
 
-const loadEvents = () => {
-	fetch("data/events.json")
-		.then((response) => {
-			if (!response.ok) {
-				throw new Error("HTTP error " + response.status);
-			}
-			return response.json();
-		})
-		.then((data) => {
-			updatePageWithEventData(data);
-		})
-		.catch((error) => {
-			console.error("There was an error!", error);
-		});
+const loadEvents = async () => {
+	try {
+		const response = await fetch("data/events.json");
+		if (!response.ok) {
+			throw new Error("HTTP error " + response.status);
+		}
+		const data = await response.json();
+		updatePageWithEventData(data);
+	} catch (error) {
+		console.error("There was an error!", error);
+	}
 };
 
 const updatePageWithEventData = (data) => {
@@ -134,7 +128,49 @@ const createEventGallery = (eventImages) => {
 	return eventImagesArray;
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-	loadTeamData();
-	loadEvents();
+const autoScrollGallery = () => {
+	// It just works, I don't know why
+	const galleryLeft = document.getElementById("gallery-left");
+	const galleryRight = document.getElementById("gallery-right");
+
+	const maxLeftWidth = parseInt(galleryLeft.parentElement.style.width);
+	const minLeftWidth = 0;
+
+	const maxRightWidth = parseInt(galleryRight.parentElement.style.width);
+	const minRightWidth = 0;
+
+	let leftStep = -1;
+	let rightStep = -1;
+
+	// Set the gallery to the initial position
+	galleryLeft.style.left = "0px";
+	galleryRight.style.left = `${-maxRightWidth}px`;
+
+	const scroll = () => {
+		const galleryLeft = document.getElementById("gallery-left");
+		const galleryRight = document.getElementById("gallery-right");
+
+		const leftWidth = parseInt(galleryLeft.style.left);
+		const rightWidth = parseInt(galleryRight.style.left);
+
+		// If borders are reached, change the direction
+		if (leftWidth < -maxLeftWidth || leftWidth > minLeftWidth) {
+			leftStep *= -1;
+		}
+
+		if (rightWidth < -maxRightWidth || rightWidth > minRightWidth) {
+			rightStep *= -1;
+		}
+
+		galleryLeft.style.left = `${leftWidth + leftStep}px`;
+		galleryRight.style.left = `${rightWidth + rightStep}px`;
+	};
+
+	setInterval(scroll, 10);
+};
+
+document.addEventListener("DOMContentLoaded", async () => {
+	await loadTeamData();
+	await loadEvents();
+	autoScrollGallery();
 });

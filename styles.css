@@ -348,17 +348,10 @@ header .logo {
 	overflow: scroll;
 	margin-bottom: 20px;
 	height: 300px;
+	/* width set by js */
+	/* Hide scrollbar */
 	scrollbar-width: none; /* Firefox */
 	-ms-overflow-style: none; /* IE and Edge */
-}
-
-#gallery-left,
-#gallery-right {
-	position: absolute;
-	display: flex;
-	flex: 1;
-
-	/* Hide scrollbar */
 }
 
 #gallery-left-container::-webkit-scrollbar,
@@ -367,36 +360,11 @@ header .logo {
 	display: none; /* Chrome, Safari, Opera*/
 }
 
-#gallery-left {
-	animation: scroll-left 30s ease-in-out infinite;
-}
-
+#gallery-left,
 #gallery-right {
-	animation: scroll-right 30s ease-in-out infinite;
-}
-
-@keyframes scroll-left {
-	0% {
-		left: 0%; /* Start from the right */
-	}
-	50% {
-		left: -100%; /* End at the left */
-	}
-	100% {
-		left: 0%; /* End at the left */
-	}
-}
-
-@keyframes scroll-right {
-	0% {
-		left: -100%; /* Start from the right */
-	}
-	50% {
-		left: 0%; /* End at the left */
-	}
-	100% {
-		left: -100%; /* End at the left */
-	}
+	position: absolute;
+	display: flex;
+	flex: 1;
 }
 
 .event-box {
