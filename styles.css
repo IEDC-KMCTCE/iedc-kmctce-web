@@ -208,8 +208,12 @@ header .logo {
 	}
 }
 
+#message-boxes {
+	display: none;
+}
+
 @media screen and (max-width: 900px) {
-	.message-boxes {
+	#message-boxes {
 		display: none;
 	}
 }
