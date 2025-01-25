@@ -1,6 +1,6 @@
 const loadTeamData = async () => {
 	try {
-		const response = await fetch("./IEDC/data/team.json");
+		const response = await fetch("./data/team.json");
 		if (!response.ok) {
 			throw new Error("HTTP error " + response.status);
 		}
@@ -51,7 +51,7 @@ const createTeamBox = (member) => {
 
 const loadEvents = async () => {
 	try {
-		const response = await fetch("./IEDC/data/events.json");
+		const response = await fetch("./data/events.json");
 		if (!response.ok) {
 			throw new Error("HTTP error " + response.status);
 		}

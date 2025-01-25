@@ -2,61 +2,61 @@
 	{
 		"name": "Majida C.V.",
 		"position": "Nodal Officer",
-		"profile_img": "./IEDC/assets/images/profiles/majidacv.png"
+		"profile_img": "./assets/images/profiles/majidacv.png"
 	},
 	{
 		"name": "Midhun K.R.",
 		"position": "Assistant Professor",
-		"profile_img": "./IEDC/assets/images/profiles/midhunkr.png"
+		"profile_img": "./assets/images/profiles/midhunkr.png"
 	},
 	{
 		"name": "Hanan Muhammed ",
 		"position": "Student Lead",
-		"profile_img": "./IEDC/assets/images/profiles/hanan.jpeg"
+		"profile_img": "./assets/images/profiles/hanan.jpeg"
 	},
 	{
 		"name": "Muhammed Zafar",
 		"position": "Student Lead",
-		"profile_img": "./IEDC/assets/images/profiles/zafar.jpeg"
+		"profile_img": "./assets/images/profiles/zafar.jpeg"
 	},
 	{
 		"name": "Binshad",
 		"position": "Quality & Operations Lead",
-		"profile_img": "./IEDC/assets/images/profiles/binshad.jpeg"
+		"profile_img": "./assets/images/profiles/binshad.jpeg"
 	},
 	{
 		"name": "Minhaj P.K.",
 		"position": "Finance Lead",
-		"profile_img": "./IEDC/assets/images/profiles/minhaj.jpeg"
+		"profile_img": "./assets/images/profiles/minhaj.jpeg"
 	},
 	{
 		"name": "Gopika Suneej",
 		"position": "Creative & Innovation Lead",
-		"profile_img": "./IEDC/assets/images/profiles/gopika.jpeg"
+		"profile_img": "./assets/images/profiles/gopika.jpeg"
 	},
 	{
 		"name": "Sreedev V.P.",
 		"position": "Technology Lead",
-		"profile_img": "./IEDC/assets/images/profiles/sreedev.png"
+		"profile_img": "./assets/images/profiles/sreedev.png"
 	},
 	{
 		"name": "Muhammed Mehfil",
 		"position": "Brand & Marketing Lead",
-		"profile_img": "./IEDC/assets/images/profiles/mehfil.png"
+		"profile_img": "./assets/images/profiles/mehfil.png"
 	},
 	{
 		"name": "Bakir",
 		"position": "Community Lead",
-		"profile_img": "./IEDC/assets/images/profiles/bakir.png"
+		"profile_img": "./assets/images/profiles/bakir.png"
 	},
 	{
 		"name": "Jihan Rouza",
 		"position": "Women Innovation Lead",
-		"profile_img": "./IEDC/assets/images/profiles/rouza.jpeg"
+		"profile_img": "./assets/images/profiles/rouza.jpeg"
 	},
 	{
 		"name": "Fathima Hudha",
 		"position": "IPR & Research Lead",
-		"profile_img": "./IEDC/assets/images/profiles/hudha.jpeg"
+		"profile_img": "./assets/images/profiles/hudha.jpeg"
 	}
 ]
