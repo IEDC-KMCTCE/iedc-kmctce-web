@@ -1,62 +1,132 @@
 [
-	{
-		"name": "Majida C.V.",
-		"position": "Nodal Officer",
-		"profile_img": "./assets/images/profiles/majidacv.png"
-	},
-	{
-		"name": "Midhun K.R.",
-		"position": "Assistant Professor",
-		"profile_img": "./assets/images/profiles/midhunkr.png"
-	},
-	{
-		"name": "Hanan Muhammed ",
-		"position": "Student Lead",
-		"profile_img": "./assets/images/profiles/hanan.jpeg"
-	},
-	{
-		"name": "Muhammed Zafar",
-		"position": "Student Lead",
-		"profile_img": "./assets/images/profiles/zafar.jpeg"
-	},
-	{
-		"name": "Binshad",
-		"position": "Quality & Operations Lead",
-		"profile_img": "./assets/images/profiles/binshad.jpeg"
-	},
-	{
-		"name": "Minhaj P.K.",
-		"position": "Finance Lead",
-		"profile_img": "./assets/images/profiles/minhaj.jpeg"
-	},
-	{
-		"name": "Gopika Suneej",
-		"position": "Creative & Innovation Lead",
-		"profile_img": "./assets/images/profiles/gopika.jpeg"
-	},
-	{
-		"name": "Sreedev V.P.",
-		"position": "Technology Lead",
-		"profile_img": "./assets/images/profiles/sreedev.png"
-	},
-	{
-		"name": "Muhammed Mehfil",
-		"position": "Brand & Marketing Lead",
-		"profile_img": "./assets/images/profiles/mehfil.png"
-	},
-	{
-		"name": "Bakir",
-		"position": "Community Lead",
-		"profile_img": "./assets/images/profiles/bakir.png"
-	},
-	{
-		"name": "Jihan Rouza",
-		"position": "Women Innovation Lead",
-		"profile_img": "./assets/images/profiles/rouza.jpeg"
-	},
-	{
-		"name": "Fathima Hudha",
-		"position": "IPR & Research Lead",
-		"profile_img": "./assets/images/profiles/hudha.jpeg"
-	}
+  {
+    "name": "Nodal Officer",
+    "position": "Nodal Officer",
+    "slug": "nodal-officer",
+    "profile_img": "./assets/images/placeholders/member-placeholder.svg",
+    "department": "Department placeholder",
+    "year": "Academic year placeholder",
+    "email": "email-placeholder@example.com",
+    "linkedin": "#",
+    "bio": "Short profile placeholder for the Nodal Officer. Replace this with the current member's introduction.",
+    "detail": "Add responsibilities, achievements, projects, and contribution details for the current Nodal Officer.",
+    "expertise": ["Leadership", "Mentorship", "Startup Ecosystem"]
+  },
+  {
+    "name": "Faculty Coordinator",
+    "position": "Faculty Coordinator",
+    "slug": "faculty-coordinator",
+    "profile_img": "./assets/images/placeholders/member-placeholder.svg",
+    "department": "Department placeholder",
+    "year": "Academic year placeholder",
+    "email": "email-placeholder@example.com",
+    "linkedin": "#",
+    "bio": "Short profile placeholder for the Faculty Coordinator. Replace this with the current member's introduction.",
+    "detail": "Add mentorship focus, program ownership, and academic coordination details for this member.",
+    "expertise": ["Faculty Support", "Program Planning", "Innovation Training"]
+  },
+  {
+    "name": "Chief Executive Officer",
+    "position": "Chief Executive Officer",
+    "slug": "chief-executive-officer",
+    "profile_img": "./assets/images/placeholders/member-placeholder.svg",
+    "department": "Department placeholder",
+    "year": "Student year placeholder",
+    "email": "email-placeholder@example.com",
+    "linkedin": "#",
+    "bio": "Short profile placeholder for the CEO. Replace this with the current student lead's introduction.",
+    "detail": "Add leadership priorities, flagship work, and startup community contributions for this member.",
+    "expertise": ["Strategy", "Leadership", "Student Startups"]
+  },
+  {
+    "name": "Chief Operating Officer",
+    "position": "Chief Operating Officer",
+    "slug": "chief-operating-officer",
+    "profile_img": "./assets/images/placeholders/member-placeholder.svg",
+    "department": "Department placeholder",
+    "year": "Student year placeholder",
+    "email": "email-placeholder@example.com",
+    "linkedin": "#",
+    "bio": "Short profile placeholder for the COO. Replace this with the current member's introduction.",
+    "detail": "Add execution responsibilities, event operations, and team coordination details for this member.",
+    "expertise": ["Operations", "Execution", "Team Coordination"]
+  },
+  {
+    "name": "Innovation Lead",
+    "position": "Innovation Lead",
+    "slug": "innovation-lead",
+    "profile_img": "./assets/images/placeholders/member-placeholder.svg",
+    "department": "Department placeholder",
+    "year": "Student year placeholder",
+    "email": "email-placeholder@example.com",
+    "linkedin": "#",
+    "bio": "Short profile placeholder for the Innovation Lead. Replace this with the current member's introduction.",
+    "detail": "Add ideation programs, prototype support, and innovation campaign details for this member.",
+    "expertise": ["Ideation", "Prototyping", "Design Thinking"]
+  },
+  {
+    "name": "Technology Lead",
+    "position": "Technology Lead",
+    "slug": "technology-lead",
+    "profile_img": "./assets/images/placeholders/member-placeholder.svg",
+    "department": "Department placeholder",
+    "year": "Student year placeholder",
+    "email": "email-placeholder@example.com",
+    "linkedin": "#",
+    "bio": "Short profile placeholder for the Technology Lead. Replace this with the current member's introduction.",
+    "detail": "Add platform ownership, technical projects, and digital infrastructure details for this member.",
+    "expertise": ["Web", "Product", "Automation"]
+  },
+  {
+    "name": "Creative Lead",
+    "position": "Creative Lead",
+    "slug": "creative-lead",
+    "profile_img": "./assets/images/placeholders/member-placeholder.svg",
+    "department": "Department placeholder",
+    "year": "Student year placeholder",
+    "email": "email-placeholder@example.com",
+    "linkedin": "#",
+    "bio": "Short profile placeholder for the Creative Lead. Replace this with the current member's introduction.",
+    "detail": "Add branding work, campaign design, media ownership, and creative achievements for this member.",
+    "expertise": ["Branding", "Design", "Content"]
+  },
+  {
+    "name": "Finance Lead",
+    "position": "Finance Lead",
+    "slug": "finance-lead",
+    "profile_img": "./assets/images/placeholders/member-placeholder.svg",
+    "department": "Department placeholder",
+    "year": "Student year placeholder",
+    "email": "email-placeholder@example.com",
+    "linkedin": "#",
+    "bio": "Short profile placeholder for the Finance Lead. Replace this with the current member's introduction.",
+    "detail": "Add sponsorship work, budgeting responsibilities, and finance coordination details for this member.",
+    "expertise": ["Budgeting", "Sponsorship", "Reporting"]
+  },
+  {
+    "name": "Community Lead",
+    "position": "Community Lead",
+    "slug": "community-lead",
+    "profile_img": "./assets/images/placeholders/member-placeholder.svg",
+    "department": "Department placeholder",
+    "year": "Student year placeholder",
+    "email": "email-placeholder@example.com",
+    "linkedin": "#",
+    "bio": "Short profile placeholder for the Community Lead. Replace this with the current member's introduction.",
+    "detail": "Add engagement programs, volunteer coordination, and community-building details for this member.",
+    "expertise": ["Community", "Networking", "Volunteers"]
+  },
+  {
+    "name": "Media Lead",
+    "position": "Media Lead",
+    "slug": "media-lead",
+    "profile_img": "./assets/images/placeholders/member-placeholder.svg",
+    "department": "Department placeholder",
+    "year": "Student year placeholder",
+    "email": "email-placeholder@example.com",
+    "linkedin": "#",
+    "bio": "Short profile placeholder for the Media Lead. Replace this with the current member's introduction.",
+    "detail": "Add photography, social media, documentation, and storytelling details for this member.",
+    "expertise": ["Media", "Documentation", "Social"]
+  }
 ]

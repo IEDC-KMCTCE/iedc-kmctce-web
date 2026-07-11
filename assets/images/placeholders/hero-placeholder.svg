@@ -1,0 +1,16 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2a2e57"/>
+      <stop offset="100%" stop-color="#141728"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" rx="32" fill="url(#bg)"/>
+  <rect x="80" y="120" width="420" height="380" rx="22" fill="#2b3a6f" opacity="0.6"/>
+  <rect x="300" y="220" width="520" height="320" rx="24" fill="#4d5cc2" opacity="0.35"/>
+  <circle cx="920" cy="180" r="72" fill="#8d72f5" opacity="0.8"/>
+  <circle cx="820" cy="520" r="108" fill="#77e4fe" opacity="0.15"/>
+  <path d="M240 560C340 520 460 560 560 520C620 500 680 440 760 460C860 490 940 560 1040 520" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+  <text x="50%" y="60%" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="60" font-weight="700">IMAGE PLACEHOLDER</text>
+  <text x="50%" y="68%" text-anchor="middle" fill="#ced1f0" font-family="Inter, sans-serif" font-size="24">Replace with hero or campus imagery</text>
+</svg>

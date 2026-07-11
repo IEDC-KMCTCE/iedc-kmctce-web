@@ -1,176 +1,207 @@
-const loadTeamData = async () => {
-	try {
-		const response = await fetch("./data/team.json");
-		if (!response.ok) {
-			throw new Error("HTTP error " + response.status);
-		}
-		const data = await response.json();
-		updatePageWithTeamData(data);
-	} catch (error) {
-		console.error("There was an error!", error);
-	}
+const isMemberPage = window.location.pathname.includes('/members/');
+const assetBase = isMemberPage ? '../' : './';
+
+const dataSources = {
+  team: `${assetBase}data/team.json`,
+  events: `${assetBase}data/events.json`,
 };
 
-const updatePageWithTeamData = (data) => {
-	const teamBoxes = document.getElementById("team-boxes");
-	if (!teamBoxes) {
-		console.error("Element with ID 'team-boxes' not found.");
-		return;
-	}
-
-	data.forEach((member) => {
-		const teamBox = createTeamBox(member);
-		teamBoxes.appendChild(teamBox);
-	});
+const normalizeAsset = (path) => {
+  if (!path) return `${assetBase}assets/images/placeholders/member-placeholder.svg`;
+  if (path.startsWith('http') || path.startsWith('../')) return path;
+  return isMemberPage ? `../${path.replace(/^\.\//, '')}` : path;
 };
 
-const createTeamBox = (member) => {
-	const teamBox = document.createElement("div");
-	teamBox.classList.add("team-box");
-
-	// Create and append the member's profile image
-	const img = document.createElement("img");
-	img.src = member.profile_img;
-	img.alt = `${member.name} Image`;
-	teamBox.appendChild(img);
-
-	// Create and append the member's name
-	const name = document.createElement("p");
-	name.classList.add("name");
-	name.textContent = member.name;
-	teamBox.appendChild(name);
-
-	// Create and append the member's position
-	const position = document.createElement("p");
-	position.classList.add("position");
-	position.textContent = member.position;
-	teamBox.appendChild(position);
-
-	return teamBox;
+const fetchJson = async (path) => {
+  const response = await fetch(path);
+  if (!response.ok) throw new Error(`Unable to load ${path}: ${response.status}`);
+  return response.json();
 };
 
-const loadEvents = async () => {
-	try {
-		const response = await fetch("./data/events.json");
-		if (!response.ok) {
-			throw new Error("HTTP error " + response.status);
-		}
-		const data = await response.json();
-		updatePageWithEventData(data);
-	} catch (error) {
-		console.error("There was an error!", error);
-	}
+const setActiveNav = () => {
+  const file = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('nav a').forEach((link) => {
+    const target = link.getAttribute('href')?.split('/').pop();
+    if (target === file || (isMemberPage && target === 'team.html')) {
+      link.classList.add('active');
+    }
+  });
 };
 
-const updatePageWithEventData = (data) => {
-	const gallery = document.getElementById("gallery");
-	if (!gallery) {
-		console.error("Element with ID 'gallery' not found.");
-		return;
-	}
+const initMenu = () => {
+  const shell = document.querySelector('.nav-shell');
+  const toggle = document.querySelector('.menu-toggle');
+  if (!shell || !toggle) return;
 
-	const [leftData, rightData] = [
-		data.slice(0, Math.floor(data.length / 2)),
-		data.slice(Math.floor(data.length / 2)),
-	];
-
-	const appendAndDuplicate = (gallery, data) => {
-		data.forEach((eventImages) => {
-			createEventGallery(eventImages).forEach((eventBox) =>
-				gallery.appendChild(eventBox)
-			);
-		});
-		// Duplicate the entire row
-		Array.from(gallery.children).forEach((child) =>
-			gallery.appendChild(child.cloneNode(true))
-		);
-	};
-
-	// Update both galleries
-	[
-		{ gallery: document.getElementById("gallery-left"), data: leftData },
-		{ gallery: document.getElementById("gallery-right"), data: rightData },
-	].forEach(({ gallery, data }) => {
-		appendAndDuplicate(gallery, data);
-		// Adjust parent container widths
-		const totalWidth = Array.from(gallery.children).reduce(
-			(sum, child) => sum + child.offsetWidth,
-			0
-		);
-		gallery.parentElement.style.width = `${totalWidth / 2}px`;
-	});
+  toggle.addEventListener('click', () => shell.classList.toggle('open'));
+  shell.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => shell.classList.remove('open'));
+  });
+  document.addEventListener('click', (event) => {
+    if (!shell.contains(event.target)) shell.classList.remove('open');
+  });
 };
 
-const createEventGallery = (eventImages) => {
-	const eventImagesArray = [];
+const revealOnScroll = () => {
+  const items = document.querySelectorAll('.reveal, .card, .team-card, .stat-card');
+  if (!('IntersectionObserver' in window)) {
+    items.forEach((item) => item.classList.add('is-visible'));
+    return;
+  }
 
-	eventImages.pictures.forEach((picture) => {
-		const eventBox = document.createElement("div");
-		eventBox.classList.add("event-box");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.14 }
+  );
 
-		const galleryOverlay = document.createElement("div");
-		galleryOverlay.classList.add("gallery-overlay");
-
-		const overlayText = document.createElement("p");
-		overlayText.textContent = eventImages.name;
-		galleryOverlay.appendChild(overlayText);
-
-		eventBox.appendChild(galleryOverlay);
-
-		const img = document.createElement("img");
-		img.src = picture;
-		img.alt = eventImages.name;
-		img.classList.add("gallery-image");
-
-		eventBox.appendChild(img);
-		eventImagesArray.push(eventBox);
-	});
-	return eventImagesArray;
+  items.forEach((item) => observer.observe(item));
 };
 
-const autoScrollGallery = () => {
-	// It just works, I don't know why
-	const galleryLeft = document.getElementById("gallery-left");
-	const galleryRight = document.getElementById("gallery-right");
-
-	const maxLeftWidth = parseInt(galleryLeft.parentElement.style.width);
-	const minLeftWidth = 0;
-
-	const maxRightWidth = parseInt(galleryRight.parentElement.style.width);
-	const minRightWidth = 0;
-
-	let leftStep = -1;
-	let rightStep = 1;
-
-	// Set the gallery to the initial position
-	galleryLeft.style.left = "0px";
-	galleryRight.style.left = `${-maxRightWidth}px`;
-
-	const scroll = () => {
-		const galleryLeft = document.getElementById("gallery-left");
-		const galleryRight = document.getElementById("gallery-right");
-
-		const leftWidth = parseInt(galleryLeft.style.left);
-		const rightWidth = parseInt(galleryRight.style.left);
-
-		// If borders are reached, change the direction
-		if (leftWidth < -maxLeftWidth || leftWidth > minLeftWidth) {
-			leftStep *= -1;
-			rightStep *= -1;
-		} else if (rightWidth < -maxRightWidth || rightWidth > minRightWidth) {
-			rightStep *= -1;
-			leftStep *= -1;
-		}
-
-		galleryLeft.style.left = `${leftWidth + leftStep}px`;
-		galleryRight.style.left = `${rightWidth + rightStep}px`;
-	};
-
-	setInterval(scroll, 10);
+const initTilt = () => {
+  document.querySelectorAll('[data-tilt]').forEach((card) => {
+    card.addEventListener('pointermove', (event) => {
+      const rect = card.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - 0.5;
+      const y = (event.clientY - rect.top) / rect.height - 0.5;
+      card.style.setProperty('--tilt-x', `${y * -7}deg`);
+      card.style.setProperty('--tilt-y', `${x * 7}deg`);
+    });
+    card.addEventListener('pointerleave', () => {
+      card.style.setProperty('--tilt-x', '0deg');
+      card.style.setProperty('--tilt-y', '0deg');
+    });
+  });
 };
 
-document.addEventListener("DOMContentLoaded", async () => {
-	await loadTeamData();
-	await loadEvents();
-	autoScrollGallery();
-});
+const createTeamCard = (member) => {
+  const card = document.createElement('a');
+  card.href = `${assetBase}members/${member.slug}.html`;
+  card.className = 'team-card';
+  card.setAttribute('data-tilt', '');
+  card.innerHTML = `
+    <span class="team-orbit" aria-hidden="true"></span>
+    <img src="${normalizeAsset(member.profile_img)}" alt="${member.name}" />
+    <div>
+      <h3>${member.name}</h3>
+      <p class="role">${member.position}</p>
+    </div>
+    <p>${member.bio}</p>
+    <span class="profile-link">Open profile</span>
+  `;
+  return card;
+};
+
+const renderTeam = (team) => {
+  document.querySelectorAll('[data-team-grid]').forEach((grid) => {
+    grid.innerHTML = '';
+    team.forEach((member) => grid.appendChild(createTeamCard(member)));
+  });
+
+  const preview = document.querySelector('[data-team-preview]');
+  if (preview) {
+    preview.innerHTML = '';
+    team.slice(0, 3).forEach((member) => preview.appendChild(createTeamCard(member)));
+  }
+};
+
+const createEventCard = (event) => {
+  const card = document.createElement('article');
+  card.className = 'card event-card';
+  card.setAttribute('data-tilt', '');
+  const image = normalizeAsset(event.pictures?.[0] || './assets/images/placeholders/event-placeholder.svg');
+  card.innerHTML = `
+    <img src="${image}" alt="${event.name}" />
+    <div class="event-card-body">
+      <div class="card-badge">${event.category || 'Activity'}</div>
+      <h3>${event.name}</h3>
+      <p>${event.summary}</p>
+      <small>${event.date || 'Date placeholder'}</small>
+    </div>
+  `;
+  return card;
+};
+
+const renderEvents = (events) => {
+  document.querySelectorAll('[data-event-grid]').forEach((grid) => {
+    grid.innerHTML = '';
+    events.forEach((event) => grid.appendChild(createEventCard(event)));
+  });
+
+  const preview = document.querySelector('[data-event-preview]');
+  if (preview) {
+    preview.innerHTML = '';
+    events.slice(0, 3).forEach((event) => preview.appendChild(createEventCard(event)));
+  }
+};
+
+const renderMemberProfile = (team) => {
+  const target = document.querySelector('[data-member-detail]');
+  if (!target) return;
+
+  const slug = window.location.pathname.split('/').pop().replace('.html', '');
+  const member = team.find((item) => item.slug === slug);
+  if (!member) {
+    target.innerHTML = '<p class="section-subtitle">Member profile placeholder not found. Add this role in data/team.json.</p>';
+    return;
+  }
+
+  document.title = `${member.name} | IEDC KMCTCE`;
+  const heroRole = document.querySelector('[data-member-role]');
+  const heroName = document.querySelector('[data-member-name]');
+  const heroBio = document.querySelector('[data-member-bio]');
+  const heroImage = document.querySelector('[data-member-image]');
+  if (heroRole) heroRole.textContent = member.position;
+  if (heroName) heroName.textContent = member.name;
+  if (heroBio) heroBio.textContent = member.bio;
+  if (heroImage) {
+    heroImage.src = normalizeAsset(member.profile_img);
+    heroImage.alt = `${member.name} profile placeholder`;
+  }
+
+  target.innerHTML = `
+    <div class="member-panel">
+      <div class="profile-card reveal">
+        <img src="${normalizeAsset(member.profile_img)}" alt="${member.name}" />
+      </div>
+      <div class="profile-details reveal">
+        <p class="card-badge">${member.position}</p>
+        <h2>${member.name}</h2>
+        <p>${member.detail}</p>
+        <div class="profile-meta">
+          <div><strong>Department</strong><small>${member.department}</small></div>
+          <div><strong>Year</strong><small>${member.year}</small></div>
+          <div><strong>Email</strong><small>${member.email}</small></div>
+          <div><strong>LinkedIn</strong><small>${member.linkedin}</small></div>
+        </div>
+        <ul class="tag-list">
+          ${member.expertise.map((tag) => `<li>${tag}</li>`).join('')}
+        </ul>
+      </div>
+    </div>
+  `;
+};
+
+const init = async () => {
+  setActiveNav();
+  initMenu();
+
+  try {
+    const [team, events] = await Promise.all([fetchJson(dataSources.team), fetchJson(dataSources.events)]);
+    renderTeam(team);
+    renderEvents(events);
+    renderMemberProfile(team);
+    revealOnScroll();
+    initTilt();
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+window.addEventListener('DOMContentLoaded', init);
