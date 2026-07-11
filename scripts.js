@@ -43,16 +43,21 @@ const initMenu = () => {
 };
 
 const revealOnScroll = () => {
-  const items = document.querySelectorAll('.reveal, .card, .team-card, .stat-card');
+  const items = document.querySelectorAll('.reveal, .section-head, .card, .team-card, .stat-card, .profile-card, .contact-form');
   if (!('IntersectionObserver' in window)) {
     items.forEach((item) => item.classList.add('is-visible'));
     return;
   }
 
+  items.forEach((item, index) => {
+    item.style.setProperty('--reveal-delay', `${Math.min(index % 6, 5) * 70}ms`);
+  });
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          entry.target.classList.add('is-popping');
           entry.target.classList.add('is-visible');
           observer.unobserve(entry.target);
         }
@@ -62,6 +67,24 @@ const revealOnScroll = () => {
   );
 
   items.forEach((item) => observer.observe(item));
+};
+
+const addHeroSignal = () => {
+  document.querySelectorAll('.hero-visual').forEach((visual) => {
+    if (visual.querySelector('.signal-panel')) return;
+
+    const signal = document.createElement('div');
+    signal.className = 'signal-panel';
+    signal.setAttribute('aria-hidden', 'true');
+    signal.innerHTML = `
+      <span class="signal-ring"></span>
+      <span class="signal-core"></span>
+      <span class="signal-line line-one"></span>
+      <span class="signal-line line-two"></span>
+      <span class="signal-line line-three"></span>
+    `;
+    visual.appendChild(signal);
+  });
 };
 
 const initTilt = () => {
@@ -191,6 +214,7 @@ const renderMemberProfile = (team) => {
 const init = async () => {
   setActiveNav();
   initMenu();
+  addHeroSignal();
 
   try {
     const [team, events] = await Promise.all([fetchJson(dataSources.team), fetchJson(dataSources.events)]);
