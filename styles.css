@@ -50,8 +50,13 @@ body::before {
 }
 
 @keyframes scanlines {
-  from { transform: translate3d(-4%, -3%, 0); }
-  to { transform: translate3d(4%, 3%, 0); }
+  from {
+    transform: translate3d(-4%, -3%, 0);
+  }
+
+  to {
+    transform: translate3d(4%, 3%, 0);
+  }
 }
 
 img {
@@ -383,19 +388,29 @@ p {
 }
 
 @keyframes pulseFrame {
-  50% { transform: scale(0.97); opacity: 0.55; }
+  50% {
+    transform: scale(0.97);
+    opacity: 0.55;
+  }
 }
 
 @keyframes dataSweep {
-  50% { transform: translateY(-180%); opacity: 0.55; }
+  50% {
+    transform: translateY(-180%);
+    opacity: 0.55;
+  }
 }
 
 @keyframes levitate {
-  50% { transform: translateY(-12px) scale(1.02); }
+  50% {
+    transform: translateY(-12px) scale(1.02);
+  }
 }
 
 @keyframes signalSpin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes signalPulse {
@@ -406,10 +421,13 @@ p {
 }
 
 @keyframes signalScan {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.24;
     transform: translateX(0) scaleX(0.46);
   }
+
   50% {
     opacity: 0.92;
     transform: translateX(20px) scaleX(1);
@@ -540,9 +558,11 @@ p {
   0% {
     box-shadow: 0 18px 60px rgba(0, 0, 0, 0.22);
   }
+
   45% {
     box-shadow: 0 24px 80px rgba(65, 230, 255, 0.18);
   }
+
   100% {
     box-shadow: 0 18px 60px rgba(0, 0, 0, 0.22);
   }
@@ -649,7 +669,9 @@ p {
 }
 
 @keyframes orbit {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .profile-link {
@@ -807,6 +829,7 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -818,6 +841,7 @@ footer {
 }
 
 @media (max-width: 920px) {
+
   .hero,
   .member-panel {
     grid-template-columns: 1fr;
@@ -846,6 +870,7 @@ footer {
 }
 
 @media (max-width: 760px) {
+
   .navbar,
   .hero,
   .section-inner,

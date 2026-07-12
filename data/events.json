@@ -40,5 +40,12 @@
     "date": "Date placeholder",
     "summary": "Replace this with volunteer, outreach, or networking activity details.",
     "pictures": ["./assets/images/placeholders/event-placeholder.svg"]
+  },
+  {
+    "name": "Activity Placeholder 07",
+    "category": "OTHERS",
+    "date": "Date placeholder",
+    "summary": "Replace this with volunteer, outreach, or networking activity details.",
+    "pictures": ["./assets/images/placeholders/event-placeholder.svg"]
   }
 ]
