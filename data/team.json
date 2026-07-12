@@ -81,7 +81,7 @@
     "linkedin": "#",
     "bio": "Short profile placeholder for the Technology Lead. Replace this with the current member's introduction.",
     "detail": "Add platform ownership, technical projects, and digital infrastructure details for this member.",
-    "expertise": ["Web", "Product", "Automation"]
+    "expertise": ["Web", "Product", "Automation", "IoT", "Embedded Systems"]
   },
   {
     "name": "Creative Lead",
