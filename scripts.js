@@ -201,6 +201,7 @@ const renderMemberProfile = (team) => {
           <div><strong>Department</strong><small>${member.department}</small></div>
           <div><strong>Year</strong><small>${member.year}</small></div>
           <div><strong>Email</strong><small>${member.email}</small></div>
+          <div><strong>Contact</strong><small>${member.contact}</small></div>
           <div><strong>LinkedIn</strong><small>${member.linkedin}</small></div>
         </div>
         <ul class="tag-list">
