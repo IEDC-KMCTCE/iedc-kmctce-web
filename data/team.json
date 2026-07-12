@@ -65,13 +65,14 @@
     "expertise": ["Ideation", "Prototyping", "Design Thinking"]
   },
   {
-    "name": "Technology Lead",
+    "name": "ANANTHU S",
     "position": "Technology Lead",
     "slug": "technology-lead",
     "profile_img": "./assets/images/placeholders/member-placeholder.svg",
-    "department": "Department placeholder",
-    "year": "Student year placeholder",
-    "email": "email-placeholder@example.com",
+    "department": "CSE",
+    "year": "S7",
+    "email": "ananthus1687@gmail.com",
+    "contact": "+91 94006 42545",
     "linkedin": "#",
     "bio": "Short profile placeholder for the Technology Lead. Replace this with the current member's introduction.",
     "detail": "Add platform ownership, technical projects, and digital infrastructure details for this member.",
